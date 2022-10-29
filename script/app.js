@@ -43,47 +43,37 @@ const setResult = (result) => {
 }
 
 const startGame = (weapon) => {
-    console.log('gamestarted')
     if(playerHealth <= 0) location.reload()
     if(computerHealth <= 0) location.reload()
     let computerWeapon = computerWeapons[Math.floor(Math.random() * 3)]
 
     setImages(weapon, computerWeapon)
-    
+    if(computerWeapon === weapon) return setResult('draw');
     switch (weapon) {
         case 'rock':
-            if(computerWeapon === 'rock') return setResult('draw');
             if(computerWeapon === 'paper') {
                 playerHealth -= 1
                 return setResult('lost');
-            }
-            if(computerWeapon === 'scissors') {
+            } else {
                 computerHealth -= 1
                 return setResult('won');
             }
-            break;
         case 'paper':
             if(computerWeapon === 'rock') {
                 computerHealth -= 1;
                return setResult('won'); 
-            } 
-            if(computerWeapon === 'paper') return setResult('draw');
-            if(computerWeapon === 'scissors') {
+            } else {
                 playerHealth -= 1;
                 return setResult('lost');
             }
-            break;
         case 'scissors':
             if(computerWeapon === 'rock') {
                  playerHealth -= 1;
                 return setResult('lost');
-            }
-            if(computerWeapon === 'paper') {
+            } else {
                 computerHealth -= 1;
                 return setResult('won');
             }
-            if(computerWeapon === 'scissors') return setResult('draw');
-            break;
         default:
             console.log('error somehow')
             break;
