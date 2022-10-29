@@ -30,7 +30,6 @@ const setImages = (playerWeapon, computerWeapon) => {
         computer.removeChild(computer.firstChild)
     }
 
-
     player.appendChild(playerImage);
     computer.appendChild(computerImage);
 }
@@ -38,8 +37,7 @@ const setImages = (playerWeapon, computerWeapon) => {
 const setResult = (result) => {
     document.querySelector('.player-health').textContent=`${playerHealth}`;
     document.querySelector('.computer-health').textContent=`${computerHealth}`;
-    document.querySelector('.result').textContent=`${result}`;    
-
+    document.querySelector('.result').textContent=`${result}`;
 }
 
 const startGame = (weapon) => {
@@ -78,6 +76,5 @@ const startGame = (weapon) => {
             console.log('error somehow')
             break;
     }
-    
 }
 
