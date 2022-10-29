@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Rock - Paper Sciccors</title>
+</head>
+<body> 
+    <h1>Choose Your Weapon</h1>
+    <div class="container">
+        <img data-weapon="rock" src="./images/rock.png" alt="image of a rock">
+        <img data-weapon="paper" src="./images/paper.png" alt="image of paper">
+        <img data-weapon="scissors" src="./images/scissors.png" alt="image of scissors">
+    </div>
+    <h2>Results</h2>
+    <div class="container">
+        <div class="computer-weapon"></div>
+        <div class="winner">
+            <p>player health: <span class="player-health">5</span></p>
+            
+            <p>computer health: <span class="computer-health">5</span></p>
+
+            <p>You <span class="result"></span></p>
+        </div>
+        <div class="player-weapon"></div>
+    </div>
+    <script src="./script/app.js"></script>
+</body>
+</html>

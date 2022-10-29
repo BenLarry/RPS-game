@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid grey 1px;
+    gap: 26px;
+    height: 175px;
+    width: 500px;
+    margin: auto;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+p {
+    text-align: center;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid grey 1px;
+    gap: 26px;
+    height: 175px;
+    width: 500px;
+    margin: auto;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+.container > div {
+    height: 150px;
+    width: 150px;
+    border: solid red 2px;
+}
